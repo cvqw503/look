@@ -1,0 +1,86 @@
+@font-face {
+  font-family: Raleway;
+  src: url(../fonts/Raleway-Light.ttf);
+}
+body {
+  font-family: Raleway, Sans-serif;
+  font-weight: 300;
+  border-color: #ddd;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
+}
+a {
+  color: #ff2d55;
+}
+a:hover {
+  color: 0099cc;
+  text-decoration: none;
+}
+a:focus {
+  outline: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.button {
+  color: #ffffff;
+  background: #ff2d55;
+  border: solid 1px #ff2d55;
+  -webkit-transition: background 0.5s ease-in, border-color 0.5s ease-in;
+  transition: background 0.5s ease-in, border-color 0.5s easi-in;
+}
+.button:hover {
+  color: #ff2d55;
+  background: #ffffff;
+  border: 1px solid #ffffff;
+}
+.form-control,
+.btn {
+  padding: 12.8px 12px;
+}
+.section-spacing {
+  padding: 4.8em 0;
+}
+.contact .form-control {
+  border-color: #ddd;
+  height: auto;
+}
+.contact h2 {
+  position: relative;
+  font-size: 34px;
+  margin-top: 0;
+  margin-bottom: 89.6px;
+}
+.contact h2:after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 1px;
+  margin: 0 auto;
+  background-color: #ff2d55;
+  left: 0;
+  right: 0;
+  bottom: -0.8em;
+}
+.contact .container .row .center-block {
+  float: none;
+}
+.contact .container .row .contact-form .form-group {
+  margin-bottom: 1.6em;
+}
+.contact .container .row .contact-form button {
+  width: 100%;
+}
