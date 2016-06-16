@@ -1,11 +1,23 @@
 @font-face {
-  font-family: Raleway;
-  src: url(../fonts/Raleway-Light.ttf);
+  font-family: Raleway-ExtraLight;
+  src: url(../fonts/Raleway-ExtraLight.ttf);
+}
+@font-face {
+  font-family: Raleway-Regular;
+  src: url(../fonts/Raleway-Regular.ttf);
+}
+@font-face {
+  font-family: Raleway-Bold;
+  src: url(../fonts/Raleway-Bold.ttf);
+}
+html {
+  height: 100%;
 }
 body {
-  font-family: Raleway, Sans-serif;
+  font-family: Raleway-ExtraLight, Sans-serif;
   font-weight: 300;
   border-color: #ddd;
+  height: 100%;
 }
 h1,
 h2,
@@ -48,6 +60,79 @@ li {
   border: 1px solid #ffffff;
 }
 .form-control,
+.button {
+  height: auto;
+}
+/*===================
+  header
+  ===================*/
+.main-header {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  background: url(../images/bg.jpg) center center no-repeat fixed;
+  background-size: cover;
+  padding: 3.2em 0;
+}
+.main-header .overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.main-header .head-hero .logo {
+  width: 250px;
+  height: 100.5px;
+  margin-bottom: 3em;
+  background: url(../images/LOOK-H-White.png) center center no-repeat;
+  background-size: contain;
+}
+.main-header .head-hero h1 {
+  color: white;
+  font-size: 65.761px;
+  padding: 25.6px 0 18px 0;
+}
+.main-header .head-hero h1 span {
+  font-family: Raleway-Regular;
+  color: #ff2d55;
+}
+.main-header .head-hero .subscribe {
+  margin-top: 1em;
+}
+.main-header .head-hero .subscribe .sub-form p {
+  color: white;
+}
+.main-header .head-hero .subscribe .sub-form p span {
+  font-family: Raleway-Bold;
+}
+.main-header .head-hero .subscribe form .form-group {
+  margin: 5px 0 3px 0;
+}
+.main-header .head-hero .subscribe form .form-group table tbody tr td {
+  vertical-align: top;
+}
+.main-header .head-hero .subscribe form .form-group table tbody tr td .button {
+  margin-left: 10px;
+}
+.fader {
+  width: 359px;
+  height: 700px;
+  background: url(../images/iPhone6Black.png) center center no-repeat;
+  background-size: contain;
+  float: right;
+}
+.fader .fledslider1 {
+  position: relative;
+  margin: 96px 36px 0;
+  width: 286px;
+}
+.fader .fledslider1 img {
+  width: 100%;
+}
+.form-control,
 .btn {
   padding: 12.8px 12px;
 }
@@ -56,7 +141,6 @@ li {
 }
 .contact .form-control {
   border-color: #ddd;
-  height: auto;
 }
 .contact h2 {
   position: relative;
@@ -83,4 +167,75 @@ li {
 }
 .contact .container .row .contact-form button {
   width: 100%;
+}
+/*===================
+	animation
+  ===================*/
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.slideInLeft {
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+}
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+    -ms-transform: translateX(-2000px);
+    transform: translateX(-2000px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+.slideInDown {
+  -webkit-animation-name: slideInDown;
+  animation-name: slideInDown;
+}
+@-webkit-keyframes slideInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes slideInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+    -ms-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+.slideInRight {
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+}
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(2000px);
+    -ms-transform: translateX(2000px);
+    transform: translateX(2000px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
 }

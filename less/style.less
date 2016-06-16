@@ -1,13 +1,25 @@
 @main-color: #ff2d55;
 @white-color: #fff;
 @font-face {
-	font-family: Raleway;
-	src:  url(../fonts/Raleway-Light.ttf);
+	font-family: Raleway-ExtraLight;
+	src:  url(../fonts/Raleway-ExtraLight.ttf);
+}
+@font-face {
+	font-family: Raleway-Regular;
+	src: url(../fonts/Raleway-Regular.ttf);
+}
+@font-face {
+	font-family: Raleway-Bold;
+	src:  url(../fonts/Raleway-Bold.ttf);
+}
+html {
+	height: 100%;
 }
 body {
-	font-family: Raleway, Sans-serif;
+	font-family: Raleway-ExtraLight, Sans-serif;
 	font-weight: 300;
 	border-color: #ddd;
+	height: 100%;
 }
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 300;
@@ -48,6 +60,94 @@ ul, li {
 	border: 1px solid @white-color;
 }
 
+.form-control, .button {
+	height: auto;
+}
+
+
+/*===================
+  header
+  ===================*/
+.main-header {
+	position: relative;
+	width: 100%;
+	min-height: 100%; //html,body都设height:100%，可以满屏
+	background: url(../images/bg.jpg) center center no-repeat fixed;
+	background-size: cover;
+	padding: 3.2em 0;
+	.overlay {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.5);
+	}
+	//纠结要不要嵌套.container .row 和 .col-md-5
+	.head-hero {
+		.logo {
+			width: 250px;
+			height: 100.5px;
+			margin-bottom: 3em;
+			background: url(../images/LOOK-H-White.png) center center no-repeat;
+			background-size: contain;
+		}
+		h1 {
+			color: white;
+			font-size: 65.761px;
+			//原网站是用margin，会和.logo重叠
+			padding: 25.6px 0 18px 0;
+			span {
+				font-family: Raleway-Regular;
+				color: @main-color;
+			}
+		}
+		.subscribe {
+			margin-top: 1em;
+			.sub-form {
+				p {
+					color: white;
+					span {
+						font-family: Raleway-Bold;
+					}
+				}
+			}
+			form {
+				.form-group {
+					margin: 5px 0 3px 0;
+					table tbody tr td{
+						vertical-align: top;
+						.nth-child(1) {
+						}
+						.button {
+							margin-left: 10px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.fader {
+	width: 359px;
+	height: 700px;
+	background: url(../images/iPhone6Black.png) center center no-repeat;
+	background-size: contain;
+	float: right;
+	.fledslider1 {
+		position: relative;
+		margin: 96px 36px 0;
+		width: 286px;
+		img {
+			width: 100%;
+		}
+	}
+}
+
+
+
 .form-control, .btn {
 	padding: 12.8px 12px;
 }
@@ -59,7 +159,6 @@ ul, li {
 .contact {
 	.form-control {
 		border-color: #ddd;
-		height: auto;
 	}
 	h2 {
 		position: relative;
@@ -92,5 +191,79 @@ ul, li {
 				}
 			}
 		}
+	}
+}
+
+
+/*===================
+	animation
+  ===================*/
+.animated {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+.slideInLeft {
+	-webkit-animation-name: slideInLeft;
+	animation-name: slideInLeft;
+}
+@keyframes slideInLeft {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateX(-2000px);
+		-ms-transform: translateX(-2000px);
+		transform: translateX(-2000px);
+	}
+	100% {
+		-webkit-transform: translateX(0);
+		-ms-transform: translateX(0);
+		transform: translateX(0);
+	}
+}
+
+.slideInDown {
+	-webkit-animation-name: slideInDown;
+	animation-name: slideInDown;
+}
+@-webkit-keyframes slideInDown {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(-2000px);
+		transform: translateY(-2000px);
+	}
+	100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+}
+@keyframes slideInDown {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(-2000px);
+		-ms-transform: translateY(-2000px);
+		transform: translateY(-2000px);
+	}
+	100% {
+		-webkit-transform: translateY(0);
+		-ms-transform: translateY(0);
+		transform: translateY(0);
+	}
+}
+.slideInRight {
+	-webkit-animation-name: slideInRight;
+	animation-name: slideInRight;
+}
+@keyframes slideInRight {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateX(2000px);
+		-ms-transform: translateX(2000px);
+		transform: translateX(2000px);
+	}
+	100% {
+		-webkit-transform: translateX(0);
+		-ms-transform: translateX(0);
+		transform: translateX(0);
 	}
 }
