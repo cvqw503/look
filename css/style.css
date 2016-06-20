@@ -25,7 +25,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 300;
+  font-weight: 99;
 }
 a {
   color: #ff2d55;
@@ -63,9 +63,9 @@ li {
 .button {
   height: auto;
 }
-/*===================
-  header
-  ===================*/
+/*
+ *  header
+ */
 .main-header {
   position: relative;
   width: 100%;
@@ -168,9 +168,16 @@ li {
 .contact .container .row .contact-form button {
   width: 100%;
 }
-/*===================
-	animation
-  ===================*/
+/*
+ * footer
+ */
+.site-footer {
+  padding: 4.8em 0;
+  background: #efefef;
+}
+/*
+ *  animation
+ */
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
